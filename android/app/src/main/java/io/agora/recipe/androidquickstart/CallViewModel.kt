@@ -3,9 +3,9 @@ package io.agora.recipe.androidquickstart
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import io.agora.scene.convoai.convoaiApi.AgentState
-import io.agora.scene.convoai.convoaiApi.Transcript
-import io.agora.scene.convoai.convoaiApi.TranscriptType
+import io.agora.conversational.api.AgentState
+import io.agora.conversational.api.Transcript
+import io.agora.conversational.api.TranscriptType
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

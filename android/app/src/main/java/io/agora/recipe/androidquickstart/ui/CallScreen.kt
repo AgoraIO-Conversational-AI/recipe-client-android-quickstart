@@ -16,9 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.agora.scene.convoai.convoaiApi.AgentState
-import io.agora.scene.convoai.convoaiApi.Transcript
-import io.agora.scene.convoai.convoaiApi.TranscriptType
+import io.agora.conversational.api.AgentState
+import io.agora.conversational.api.Transcript
+import io.agora.conversational.api.TranscriptType
 
 @Composable
 fun CallScreen(

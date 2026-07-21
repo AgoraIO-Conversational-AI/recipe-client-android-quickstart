@@ -9,7 +9,7 @@ android {
     compileSdk = 35
     defaultConfig {
         applicationId = "io.agora.recipe.androidquickstart"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1; versionName = "1.0"
         buildConfigField("String", "AGENT_BACKEND_URL", "\"http://10.0.2.2:8000\"")
@@ -26,6 +26,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     implementation(libs.agora.rtc)
     implementation(libs.agora.rtm)
+    implementation("io.agora.agents:agora-agent-client-toolkit:2.9.0")
     implementation(libs.okhttp)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.gson)

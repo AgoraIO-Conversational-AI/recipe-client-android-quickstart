@@ -2,18 +2,18 @@
 
 A native **Android (Kotlin + Jetpack Compose)** voice-agent quickstart. It talks to a bundled,
 **key-less** Python backend and renders the live transcript using Agora's official
-`ConversationalAIAPI` Kotlin toolkit (vendored). The agent greets you on join — no human speech is
+`ConversationalAIAPI` Kotlin toolkit. The agent greets you on join — no human speech is
 required to see it working.
 
-The app owns the Agora **RTC + RTM** lifecycle; the vendored toolkit only parses the agent's messages
+The app owns the Agora **RTC + RTM** lifecycle; the toolkit parses the agent's messages
 into transcript and agent-state callbacks.
 
 ## Layout
 
 - `server/` — the reused key-less Python/FastAPI backend (`GET /get_config`, `POST /startAgent`,
   `POST /stopAgent`). A managed cascade means you only need `AGORA_APP_ID` / `AGORA_APP_CERTIFICATE`.
-- `android/` — the Gradle / Kotlin / Compose app, with the two Agora Maven SDKs and the vendored
-  `convoaiApi/` toolkit.
+- `android/` — the Gradle / Kotlin / Compose app, with Agora RTC, RTM, and Agent Client Toolkit
+  dependencies from Maven Central.
 
 ## Zero-key
 
@@ -71,13 +71,15 @@ Resolved from Maven Central (+ jitpack):
 
 - `io.agora.rtc:full-sdk:4.5.1`
 - `io.agora:agora-rtm:2.2.3`
+- `io.agora.agents:agora-agent-client-toolkit:2.9.0`
 
-## Vendored toolkit (MIT)
+The Android app requires API 26 or newer, matching the Agent Client Toolkit 2.9.0 AAR metadata.
 
-`android/app/src/main/java/io/agora/scene/convoai/convoaiApi/` is copied verbatim from
-[`AgoraIO-Community/Conversational-AI-Demo`](https://github.com/AgoraIO-Community/Conversational-AI-Demo)
-(MIT). Its license and a project `NOTICE` are preserved. A small `CovLogger` shim routes the toolkit's
-logging to `android.util.Log`.
+## Agent Client Toolkit
+
+The transcript and agent-event implementation comes from the published
+`io.agora.agents:agora-agent-client-toolkit:2.9.0` Maven artifact. Application code imports its
+public API from `io.agora.conversational.api`.
 
 ## License
 

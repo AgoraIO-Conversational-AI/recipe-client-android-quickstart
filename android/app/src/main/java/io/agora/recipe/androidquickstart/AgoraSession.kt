@@ -12,24 +12,24 @@ import io.agora.rtm.ErrorInfo
 import io.agora.rtm.ResultCallback
 import io.agora.rtm.RtmClient
 import io.agora.rtm.RtmConfig
-import io.agora.scene.convoai.convoaiApi.ConversationalAIAPIConfig
-import io.agora.scene.convoai.convoaiApi.ConversationalAIAPIError
-import io.agora.scene.convoai.convoaiApi.ConversationalAIAPIImpl
-import io.agora.scene.convoai.convoaiApi.IConversationalAIAPI
-import io.agora.scene.convoai.convoaiApi.IConversationalAIAPIEventHandler
-import io.agora.scene.convoai.convoaiApi.InterruptEvent
-import io.agora.scene.convoai.convoaiApi.MessageError
-import io.agora.scene.convoai.convoaiApi.MessageReceipt
-import io.agora.scene.convoai.convoaiApi.Metric
-import io.agora.scene.convoai.convoaiApi.ModuleError
-import io.agora.scene.convoai.convoaiApi.StateChangeEvent
-import io.agora.scene.convoai.convoaiApi.Transcript
-import io.agora.scene.convoai.convoaiApi.TranscriptRenderMode
-import io.agora.scene.convoai.convoaiApi.Turn
-import io.agora.scene.convoai.convoaiApi.VoiceprintStateChangeEvent
+import io.agora.conversational.api.ConversationalAIAPIConfig
+import io.agora.conversational.api.ConversationalAIAPIError
+import io.agora.conversational.api.ConversationalAIAPIImpl
+import io.agora.conversational.api.IConversationalAIAPI
+import io.agora.conversational.api.IConversationalAIAPIEventHandler
+import io.agora.conversational.api.InterruptEvent
+import io.agora.conversational.api.MessageError
+import io.agora.conversational.api.MessageReceipt
+import io.agora.conversational.api.Metric
+import io.agora.conversational.api.ModuleError
+import io.agora.conversational.api.StateChangeEvent
+import io.agora.conversational.api.Transcript
+import io.agora.conversational.api.TranscriptRenderMode
+import io.agora.conversational.api.Turn
+import io.agora.conversational.api.VoiceprintStateChangeEvent
 
 /**
- * Owns the Agora RTC engine, the RTM client and the vendored ConversationalAI toolkit,
+ * Owns the Agora RTC engine, the RTM client and the ConversationalAI toolkit,
  * and implements the toolkit's event handler. The app drives the RTC/RTM lifecycle; the
  * toolkit only parses messages into transcript / state callbacks.
  *

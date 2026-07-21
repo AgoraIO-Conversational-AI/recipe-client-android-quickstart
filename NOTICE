@@ -1,2 +1,2 @@
-app/src/main/java/io/agora/scene/convoai/convoaiApi is vendored from
-https://github.com/AgoraIO-Community/Conversational-AI-Demo (MIT).
+This app depends on Agora Agent Client Toolkit for Android 2.9.0:
+io.agora.agents:agora-agent-client-toolkit:2.9.0
